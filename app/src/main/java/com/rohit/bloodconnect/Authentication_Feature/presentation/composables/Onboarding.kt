@@ -10,27 +10,17 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.rohit.bloodconnect.Authentication_Feature.navigation.setFirstTimeUser
 
 
 import android.content.Context
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.rohit.bloodconnect.Authentication_Feature.navigation.Screen
 import com.rohit.bloodconnect.shared_preference.SharedPreferencesHelper.setOnboardingComplete
-
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 
 @Composable
 fun OnboardingScreen(navController: NavHostController) {

@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.app.ActivityCompat
-import com.rohit.bloodconnect.Authentication_Feature.util.PermissionHandler
+import com.rohit.bloodconnect.util.PermissionHandler
 
 
 @Composable

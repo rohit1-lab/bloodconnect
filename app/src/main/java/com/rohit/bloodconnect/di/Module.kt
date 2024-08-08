@@ -1,4 +1,4 @@
-package com.rohit.bloodconnect.Authentication_Feature.di
+package com.rohit.bloodconnect.di
 
 import android.app.Application
 import android.content.Context
@@ -9,6 +9,9 @@ import com.rohit.bloodconnect.Authentication_Feature.data.repository.AuthReposit
 import com.rohit.bloodconnect.Authentication_Feature.usecases.GoogleSignInUseCase
 import com.rohit.bloodconnect.Authentication_Feature.usecases.SignInUseCase
 import com.rohit.bloodconnect.Authentication_Feature.usecases.SignUpUseCase
+import com.rohit.bloodconnect.BloodRequest_Feature.data.Api.UserApi
+import com.rohit.bloodconnect.BloodRequest_Feature.data.Repository.UserRepository
+import com.rohit.bloodconnect.BloodRequest_Feature.data.Repository.UserRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +20,6 @@ import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
-
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
@@ -35,12 +37,20 @@ object AppModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
-
+    @Provides
+    @Singleton
+    fun provideUserApi(retrofit: Retrofit): UserRepository {
+        return retrofit.create(UserRepository::class.java)
+    }
+    @Provides
+    @Singleton
+    fun provideUserRepository(userApi: UserApi): UserRepository = UserRepositoryImpl(userApi)
     @Provides
     @Singleton
     fun provideAuthApi(retrofit: Retrofit): AuthApi {
         return retrofit.create(AuthApi::class.java)
     }
+
     @Provides
     @Singleton
     fun provideAuthRepository(authApi: AuthApi): AuthRepository = AuthRepositoryImpl(authApi)

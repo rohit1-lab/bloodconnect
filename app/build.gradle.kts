@@ -78,7 +78,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.6.8")
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.8")
-
-
+    implementation (libs.accompanist.permissions)
+    implementation (libs.firebase.messaging)
+    implementation("com.mapbox.maps:android:11.5.1")
 
 }

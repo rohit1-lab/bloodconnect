@@ -8,6 +8,7 @@ plugins {
 buildscript {
 
     dependencies {
+        classpath (libs.google.services)
         classpath("com.google.dagger:hilt-android-gradle-plugin:2.51.1")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
     }

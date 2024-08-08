@@ -1,4 +1,4 @@
-package com.rohit.bloodconnect.Authentication_Feature.util
+package com.rohit.bloodconnect.util
 
 import com.auth0.android.jwt.JWT
 import java.util.Date

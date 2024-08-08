@@ -5,7 +5,6 @@ import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -20,10 +19,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelStore
-import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -34,11 +29,8 @@ import com.rohit.bloodconnect.Authentication_Feature.navigation.Screen
 import com.rohit.bloodconnect.Authentication_Feature.presentation.events.AuthEvent
 import com.rohit.bloodconnect.Authentication_Feature.presentation.states.AuthState
 import com.rohit.bloodconnect.Authentication_Feature.presentation.viewmodel.AuthViewModel
-import com.rohit.bloodconnect.Authentication_Feature.usecases.GoogleSignInUseCase
-import com.rohit.bloodconnect.Authentication_Feature.usecases.SignInUseCase
 import com.rohit.bloodconnect.R
 import com.rohit.bloodconnect.shared_preference.SharedPreferencesHelper
-import dagger.hilt.processor.internal.definecomponent.codegen._dagger_hilt_android_components_ViewModelComponent
 
 @Composable
 fun LoginScreen(navController: NavHostController) {

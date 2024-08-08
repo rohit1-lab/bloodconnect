@@ -1,8 +1,11 @@
 [versions]
+accompanistPermissions = "0.29.0-alpha"
 activityComposeVersion = "1.9.1"
 agp = "8.5.1"
 converterGson = "2.9.0"
 firebaseBom = "33.1.2"
+firebaseMessaging = "24.0.0"
+googleServices = "4.4.2"
 hiltAndroid = "2.51.1"
 hiltAndroidGradlePlugin = "2.44"
 hiltAndroidGradlePluginVersion = "2.51.1"
@@ -33,6 +36,7 @@ uiToolingPreview = "1.6.8"
 securityCryptoKtx = "1.0.0"
 
 [libraries]
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanistPermissions" }
 androidx-activity-compose-v151 = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
@@ -43,6 +47,8 @@ auth0-java-jwt = { module = "com.auth0:java-jwt", version.ref = "javaJwtVersion"
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging", version.ref = "firebaseMessaging" }
+google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidGradlePluginVersion" }
 hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroidGradlePlugin" }

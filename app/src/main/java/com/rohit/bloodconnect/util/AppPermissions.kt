@@ -1,4 +1,4 @@
-package com.rohit.bloodconnect.Authentication_Feature.util
+package com.rohit.bloodconnect.util
 
 import android.app.Activity
 import android.content.Context
